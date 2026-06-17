@@ -12,7 +12,10 @@
 <!-- NAV -->
 <nav>
   <a href="#accueil" class="logo">BIN AMEER WAHDI Adam</a>
-  <ul class="nav-links">
+  <button class="nav-toggle" id="navToggle" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+  <ul class="nav-links" id="navLinks">
     <li><a href="#apropos">À propos</a></li>
     <li><a href="#projets">Projets</a></li>
     <li><a href="#competences">Compétences</a></li>
@@ -28,8 +31,8 @@
       <div class="tag">BUT Réseaux &amp; Télécommunications</div>
       <h1>Bonjour, je suis<br><span>BIN AMEER WAHDI Adam</span></h1>
       <p class="hero-desc">
-        Étudiant malaisien en <strong>BUT R&amp;T</strong>, passionné par les réseaux,
-        la cybersécurité et l'infrastructure système.
+        Étudiant malaisien en <strong>BUT R&amp;T</strong>, passionné par les réseaux et
+        la cybersécurité.
       </p>
       <div class="btns">
         <a href="#contact" class="btn btn-dark">Me contacter</a>
@@ -55,16 +58,13 @@
         Au départ Internet me paraissait évident — puis la curiosité a pris le dessus.
       </blockquote>
       <p>
-        C'est cette curiosité qui m'a conduit en <strong>BUT Réseaux &amp; Télécommunications</strong>.
-        Aujourd'hui, j'apprends à passer de l'utilisateur à celui qui comprend, configure et sécurise les infrastructures.
+        Je m'appelle Adam Ameer, je suis né en Selangor, Malaisie et je poursuis actuellement mes études en <strong>BUT Réseaux &amp; Télécommunications</strong>.
       </p>
       <p>
-        Ce qui me motive vraiment : ne pas seulement « faire fonctionner » un réseau,
-        mais <strong>comprendre en profondeur</strong> ce qui se passe et être capable de l'expliquer simplement.
+        Au cours de ma formation, j’ai acquis des connaissances dans plusieurs domaines tels que la programmation, le développement web, les bases de données, les réseaux et les systèmes informatiques. J’apprécie particulièrement les projets qui me permettent de mettre en pratique mes compétences techniques tout en travaillant en équipe. Chaque expérience représente pour moi une opportunité d’apprendre, de progresser et de relever de nouveaux défis
       </p>
       <p>
-        Je m'oriente vers <strong>l'administration systèmes &amp; réseaux</strong>, avec un intérêt croissant pour la cybersécurité.
-        En dehors du technique, j'apprécie les jeux compétitifs en ligne.
+        À travers ce portfolio, je souhaite partager mon parcours académique, mes compétences ainsi que les différents projets que j’ai réalisés. Mon objectif est de continuer à développer mon expertise dans le domaine de l’informatique et de contribuer à des projets innovants qui ont un impact positif. Curieux, motivé et déterminé, je suis toujours prêt à découvrir de nouvelles technologies et à enrichir mes connaissances.
       </p>
     </div>
   </div>
@@ -77,22 +77,58 @@
   <div class="sec-label">Projets</div>
   <h2>Mes réalisations</h2>
   <div class="projects-list">
-
-    <div class="project-card">
-      <div class="proj-header">
-        <div class="proj-title">Simulation réseau d'entreprise</div>
-        <span class="proj-type">Technique</span>
+  <!-- PROJECT 1 -->
+  <div class="project-card">
+    <div class="proj-header">
+      <div class="proj-title">
+        Projet Système Prise Photos Banc Avionique
       </div>
-      <p class="proj-desc">Conception d'un LAN segmenté par VLANs. Mise en place du routage inter-VLAN, DHCP, ACLs et VPN sur Cisco Packet Tracer.</p>
-      <div class="tags">
-        <span class="tag-sm">Cisco PT</span>
-        <span class="tag-sm">VLAN</span>
-        <span class="tag-sm">DHCP</span>
-        <span class="tag-sm">VPN</span>
-      </div>
+      <span class="proj-type">Technique</span>
     </div>
 
+    <p class="proj-desc">
+      Une application web sécurisée sur Raspberry Pi 3 pour la prise de photos automatisée et la gestion d'utilisateurs d'un banc avionique.
+    </p>
+
+    <div class="tags">
+      <span class="tag-sm">Raspberry Pi 3</span>
+      <span class="tag-sm">Python</span>
+      <span class="tag-sm">Base de données</span>
+      <span class="tag-sm">PHP</span>
+      <span class="tag-sm">HTML/CSS</span>
+      <span class="tag-sm">GitHub</span>
+    </div>
+
+    <button class="project-btn" onclick="openProject('p1')">
+      Show More
+    </button>
   </div>
+
+  <!-- PROJECT 2 -->
+  <div class="project-card">
+    <div class="proj-header">
+      <div class="proj-title">
+        Réalisation d'une vidéo explicative sur le montage d'un PC Gaming
+      </div>
+      <span class="proj-type">Communication</span>
+    </div>
+
+    <p class="proj-desc">
+      Réalisation d'une vidéo en anglais présentant les étapes de construction d'un PC gaming.
+    </p>
+
+    <div class="tags">
+      <span class="tag-sm">Communication</span>
+      <span class="tag-sm">Vidéo</span>
+      <span class="tag-sm">Montage PC</span>
+    </div>
+
+    <button class="project-btn" onclick="openProject('p2')">
+      Show More
+    </button>
+  </div>
+
+</div>
 </section>
 
 <hr class="divider"/>
@@ -109,7 +145,6 @@
         <span class="skill-pill">VLAN / STP</span>
         <span class="skill-pill">NAT / ACL</span>
         <span class="skill-pill">DHCP / DNS</span>
-        <span class="skill-pill">VPN</span>
         <span class="skill-pill">Cisco Packet Tracer</span>
         <span class="skill-pill">Wireshark</span>
       </div>
@@ -123,8 +158,10 @@
         <span class="skill-pill">JavaScript</span>
         <span class="skill-pill">Git / GitHub</span>
         <span class="skill-pill">Linux</span>
+        <span class="skill-pill">PHP</span>
+        <span class="skill-pill">MySQL</span>
+        <span class="skill-pill">C / C++</span>
       </div>
-    </div>
     </div>
   </div>
 </section>
@@ -138,10 +175,10 @@
   <div class="timeline">
 
     <div class="timeline-item">
-      <div class="t-period">Sept. 2024 →</div>
+      <div class="t-period">Sept. 2025 →</div>
       <div class="t-content">
         <div class="t-role">BUT Réseaux &amp; Télécommunications</div>
-        <div class="t-where">IUT — Ville</div>
+        <div class="t-where">IUT — Nice Côte d'Azur</div>
         <div class="t-desc">Formation en approche par compétences axée sur l'administration réseau, la cybersécurité et les télécommunications.</div>
       </div>
     </div>
@@ -168,6 +205,142 @@
 </section>
 
 <footer>© 2025 BIN AMEER WAHDI Adam — BUT Réseaux &amp; Télécommunications</footer>
+
+<!-- MODAL -->
+<div class="modal-overlay" id="modalOverlay" onclick="closeProjectOnOverlay(event)">
+  <div class="modal-box">
+    <button class="modal-close" onclick="closeProject()">✕</button>
+    <img class="modal-cover" id="modalCover" src="" alt=""/>
+    <div class="modal-title" id="modalTitle"></div>
+    <span class="modal-type" id="modalType"></span>
+
+    <div class="modal-block">
+      <h4>Contexte du projet</h4>
+      <p id="modalContexte"></p>
+    </div>
+    <div class="modal-block">
+      <h4>Objectif</h4>
+      <p id="modalObjectif"></p>
+    </div>
+    <div class="modal-block">
+      <h4>Travail réalisé</h4>
+      <p id="modalTravail"></p>
+    </div>
+    <div class="modal-block">
+      <h4>Technologies et outils utilisés</h4>
+      <div class="tags" id="modalTechnos"></div>
+    </div>
+    <div class="modal-block">
+      <h4>Ce que j'ai appris</h4>
+      <p id="modalAppris"></p>
+    </div>
+    <div class="modal-block">
+      <h4>Difficultés rencontrées</h4>
+      <p id="modalDifficultes"></p>
+    </div>
+    <div class="modal-block">
+      <h4>Preuves du projet</h4>
+      <p id="modalPreuves"></p>
+      <div id="modalPreuveMedia"></div>
+    </div>
+  </div>
+</div>
+
+<script>
+  const projectsData = {
+    p1: {
+      title: "Projet Système Prise Photos Banc Avionique",
+      type: "Technique",
+      cover: "SESAR-detoure.png",
+      contexte: "Un banc avionique est composé de plusieurs équipements reliés par des dizaines de câbles eux même composés de centaines de fils Pour valider une avionique, il est nécessaire d’investiguer / vérifier des comportements physiques en ajoutant des équipements de mesure (oscilloscope, multimètre, boîtes éclatées,…) et/ou de corriger des câbles mal définis ou réalisés Ces interventions / modifications ne sont pas forcément tracés (car ponctuelles) mais elles agissent sur la configuration du banc et donc sur les résultats obtenus",
+      objectif: "Ce projet de banc avionique consiste à développer un système capable de prendre automatiquement des photos avant chaque test, ainsi que des photos manuelles à la demande. Les images sont archivées et accessibles via un site web permettant de consulter l'historique des prises de vue.Le système intègre également un détecteur de luminosité afin d'assurer de bonnes conditions de capture et une gestion des utilisateurs autorisés pour sécuriser l'accès aux différentes fonctionnalités. Ce projet m'a permis de mettre en pratique des compétences en développement web, systèmes embarqués et gestion de données.",
+      travail: "Dans le cadre du projet , j'ai participé au développement d'une application sécurisée de gestion d'utilisateurs et de prise de photos déployée sur Raspberry Pi 3. Le projet intègre un capteur de luminosité BH1750 piloté via I2C, un contrôle de LED par GPIO en Python, ainsi qu'un site web avec gestion de rôles et authentification sécurisée. J'ai contribué à la configuration réseau du Raspberry Pi, le développement du programme Python de contrôle matériel, la conception de la base de données, la rédaction des procédures de test et fiches d'anomalies, en travaillant en équipe selon une méthodologie de gestion de projet et en assurant la traçabilité du code via un dépôt GitHub privé",
+      technos: ["Raspberry Pi 3", "Python", "Base de données", "PHP", "HTML/CSS", "I2C", "GPIO", "GitHub"],
+      appris: "Ce projet m'a permis d'apprendre à configurer et administrer un système embarqué sous Raspberry Pi 3, notamment l'installation d'un serveur web, d'une base de données  et la configuration réseau en adresse IP statique pour une liaison point à point. J'ai également renforcé mes compétences en programmation Python pour l'interfaçage avec du matériel physique, en particulier la communication I2C avec un capteur de luminosité et le pilotage de GPIO. Sur le plan méthodologique, j'ai appris à structurer un projet en suivant une démarche rigoureuse de vérification et de validation, et à travailler en équipe grâce à des outils de gestion de projet comme le RACI et l'analyse des risques. Enfin, ce projet m'a sensibilisé aux enjeux de sécurité applicative, notamment la gestion des mots de passe chiffrés, le contrôle d'accès par rôles et la séparation des responsabilités entre opérateurs et administrateurs.",
+      difficultes: "L'une des principales difficultés rencontrées a concerné l'intégration entre les différentes parties du projet, notamment la coordination entre la sécurisation du système de connexion et le reste de l'application développée par les autres membres de l'équipe. Lors de la phase de test, plusieurs anomalies de sécurité ont été détectées, comme le mot de passe visible en clair pendant sa modification. Identifier l'origine exacte de ces anomalies et proposer une correction qui respecte à la fois les exigences de sécurité et le bon fonctionnement du reste de l'application a demandé plusieurs itérations entre l'analyse du problème, la correction et la revalidation par les tests. Cette expérience m'a appris à être plus rigoureux dans la vérification du comportement du système face à des cas limites, et à anticiper davantage les implications en matière de sécurité dès la conception plutôt qu'après les tests.",
+      preuves: "L'interface web est illustrée ci-dessous.",
+      preuveType: "image",
+      preuveSrc: ""
+    },
+    p2: {
+      title: "Réalisation d'une vidéo explicative sur le montage d'un PC Gaming",
+      type: "Technique",
+      cover: "gamingpc.jpg",
+      contexte: "Dans le cadre d'un projet de communication en anglais, nous avons réalisé une vidéo expliquant les différentes étapes de la construction d'un setup PC gaming.",
+      objectif: "L'objectif était de présenter de manière claire et accessible le processus d'assemblage d'un ordinateur gaming tout en développant nos compétences en communication technique en anglais.",
+      travail: "Nous avons effectué des recherches sur les composants informatiques, préparé le script, réalisé les prises de vue et assuré le montage vidéo afin de produire un contenu informatif et pédagogique.",
+      technos: ["Vidéo", "Montage", "Communication", "Anglais", "CapCut"],
+      appris: "Ce projet m'a permis d'approfondir mes connaissances sur les composants d'un PC, leur compatibilité et leur rôle, tout en améliorant mon expression orale et écrite en anglais.",
+      difficultes: "Les principales difficultés ont été la coordination des différentes étapes de production, l'utilisation d'un vocabulaire technique précis en anglais et le montage de la vidéo.",
+      preuves: "Vidéo de démonstration ci-dessous.",
+      preuveType: "video",
+      preuveSrc: "PROJECT.mp4"
+    }
+  };
+
+  function openProject(id) {
+    const data = projectsData[id];
+    document.getElementById('modalCover').src = data.cover;
+    document.getElementById('modalCover').alt = data.title;
+    document.getElementById('modalTitle').textContent = data.title;
+    document.getElementById('modalType').textContent = data.type;
+    document.getElementById('modalContexte').textContent = data.contexte;
+    document.getElementById('modalObjectif').textContent = data.objectif;
+    document.getElementById('modalTravail').textContent = data.travail;
+    document.getElementById('modalAppris').textContent = data.appris;
+    document.getElementById('modalDifficultes').textContent = data.difficultes;
+    document.getElementById('modalPreuves').textContent = data.preuves;
+
+    const technosEl = document.getElementById('modalTechnos');
+    technosEl.innerHTML = '';
+    data.technos.forEach(t => {
+      const span = document.createElement('span');
+      span.className = 'tag-sm';
+      span.textContent = t;
+      technosEl.appendChild(span);
+    });
+
+    const mediaEl = document.getElementById('modalPreuveMedia');
+    mediaEl.innerHTML = '';
+    if (data.preuveType === 'image') {
+      const img = document.createElement('img');
+      img.src = data.preuveSrc;
+      img.alt = "Preuve du projet";
+      img.className = 'preuve-media';
+      mediaEl.appendChild(img);
+    } else if (data.preuveType === 'video') {
+      const vid = document.createElement('video');
+      vid.src = data.preuveSrc;
+      vid.controls = true;
+      vid.className = 'preuve-media';
+      mediaEl.appendChild(vid);
+    }
+
+    document.getElementById('modalOverlay').classList.add('open');
+  }
+
+  function closeProject() {
+    document.getElementById('modalOverlay').classList.remove('open');
+  }
+
+  function closeProjectOnOverlay(e) {
+    if (e.target.id === 'modalOverlay') closeProject();
+  }
+
+  // Mobile nav toggle
+  const navToggle = document.getElementById('navToggle');
+  const navLinks = document.getElementById('navLinks');
+  navToggle.addEventListener('click', () => {
+    navLinks.classList.toggle('open');
+    navToggle.classList.toggle('open');
+  });
+  navLinks.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => {
+      navLinks.classList.remove('open');
+      navToggle.classList.remove('open');
+    });
+  });
+</script>
 
 </body>
 </html>
